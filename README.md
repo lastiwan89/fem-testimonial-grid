@@ -25,7 +25,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL: [GitHub Code](https://github.com/lastiwan89/fem-testimonial-grid)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://64e2cb8d00639e3c3ca74a7b--thriving-salmiakki-4babd8.netlify.app/)
 
 ## My process
 
@@ -46,7 +46,7 @@ Use this section to recap over some of your major learnings while working throug
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/lastiwan89)
+- Frontend Mentor - [@lastiwan89](https://www.frontendmentor.io/profile/lastiwan89)
 
 ## Acknowledgments
 
