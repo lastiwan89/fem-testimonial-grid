@@ -1,0 +1,115 @@
+:root {
+  --violet: hsl(263, 55%, 52%);
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --fs-body: 13px;
+  --font-stack: "Barlow Semi Condensed", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-stack);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "one one two three"
+    "four five five three";
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1240px;
+
+  & .container {
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 2rem;
+    gap: 1rem;
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, 0.19),
+      2px 6px 6px rgba(0, 0, 0, 0.23);
+
+    & .hero {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      & img {
+        border-radius: 50%;
+        outline: 2px solid white;
+      }
+    }
+
+    & .offer {
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+    & .text {
+      font-weight: 500;
+      font-size: 1rem;
+    }
+  }
+
+  & .item-1 {
+    grid-area: one;
+    background-color: var(--violet);
+    color: var(--white);
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 85% 0%;
+  }
+  & .item-2 {
+    grid-area: two;
+    background-color: var(--dark-grayish-blue);
+    color: var(--white);
+  }
+  & .item-3 {
+    grid-area: four;
+    background-color: var(--white);
+  }
+  & .item-4 {
+    grid-area: five;
+    background-color: var(--white);
+    background-color: var(--dark-blackish-blue);
+    color: var(--white);
+  }
+  & .item-5 {
+    grid-area: three;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 2fr));
+    grid-template-areas:
+      "one"
+      "two"
+      "four"
+      "five"
+      "three";
+    gap: 1.5rem;
+    & .container {
+      width: 100%;
+    }
+  }
+}
